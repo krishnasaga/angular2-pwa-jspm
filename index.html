@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello how are you ?</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="packages/system.js"></script>
+    <script src="packages/config.js"></script>
+  </html>
+  <body>
+    <my-app><div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); " "></div></my-app>
+    <network-banner></network-banner>
+    <script>
+      System.import('build/shell');
+    </script>
+    <script src="build/register-serviceworker.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<div class="mdl-layout__container">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-small-screen is-upgraded" data-upgraded=",MaterialLayout">
+  <header class="mdl-layout__header is-casting-shadow">
+    <div [attr.aria-expanded]="menuExpanded" role="button" tabindex="0" class="mdl-layout__drawer-button">
+      <i class="material-icons" (click)="toggleMenu()" ></i>
+    </div>
+      <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">{{ name }}</span>
+      <div class="mdl-layout-spacer"></div>
+    </div>
+  </header>
+  <div
+    [attr.class]="'mdl-layout__drawer' + ( menuExpanded ? ' is-visible': '' )"
+    aria-hidden="true"
+    (click)="toggleMenu()"
+    >
+    <span class="mdl-layout-title">{{ name }}</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Home</a>
+      <a class="mdl-navigation__link" href="">Search</a>
+      <a class="mdl-navigation__link" href="">Only Online</a>
+      <a class="mdl-navigation__link" href="">Ofline</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <p>
+      </p>
+    </div>
+  </main>
+<div
+  [attr.class]="'mdl-layout__obfuscator' + ( menuExpanded ? ' is-visible': '' )"
+  (click)="toggleMenu()"
+  >
+</div>
+</div>
+</div>
